@@ -1,8 +1,7 @@
-import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertAll;
-
 import org.junit.Before;
+import static org.junit.jupiter.api.Assertions.assertAll;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 
 public class NumberSystemConversionTest {
