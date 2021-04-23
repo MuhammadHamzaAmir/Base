@@ -126,11 +126,11 @@ class NumberSystemConversion {
             dec = dec / 2;
         }
         binary = binary + String.valueOf(dec);
-        StringBuilder sb = new StringBuilder();
-        sb.append(binary);
-        sb.reverse();
+        StringBuilder str_b = new StringBuilder();
+        str_b.append(binary);
+        str_b.reverse();
 
-        return sb.toString();
+        return str_b.toString();
     }
 
     public String DecimalToOctal(int dec) {
@@ -149,11 +149,11 @@ class NumberSystemConversion {
             dec = dec / 8;
         }
         octal = octal + String.valueOf(dec);
-        StringBuilder sb = new StringBuilder();
-        sb.append(octal);
-        sb.reverse();
+        StringBuilder str_b = new StringBuilder();
+        str_b.append(octal);
+        str_b.reverse();
 
-        return sb.toString();
+        return str_b.toString();
     }
 
     public String DecimalToHexaDecimal(int dec) {
@@ -167,44 +167,44 @@ class NumberSystemConversion {
         }
         while (dec > 15) {
             int r = dec % 16;
-            if (r == 10) {
-                hex = hex + "A";
-            } else if (r == 11) {
+            if (r == 11) {
                 hex = hex + "B";
-            } else if (r == 12) {
-                hex = hex + "C";
+            } else if (r == 10) {
+                hex = hex + "A";
             } else if (r == 13) {
                 hex = hex + "D";
-            } else if (r == 14) {
-                hex = hex + "E";
+            } else if (r == 12) {
+                hex = hex + "C";
             } else if (r == 15) {
                 hex = hex + "F";
+            } else if (r == 14) {
+                hex = hex + "E";
             } else {
                 hex = hex + String.valueOf(r);
             }
 
             dec = dec / 16;
         }
-        if (dec == 10) {
-            hex = hex + "A";
-        } else if (dec == 11) {
-            hex = hex + "B";
+        if (dec == 13) {
+            hex = hex + "D";
         } else if (dec == 12) {
             hex = hex + "C";
-        } else if (dec == 13) {
-            hex = hex + "D";
-        } else if (dec == 14) {
-            hex = hex + "E";
         } else if (dec == 15) {
             hex = hex + "F";
-        } else {
+        } else if (dec == 11) {
+            hex = hex + "B";
+        } else if (dec == 10) {
+            hex = hex + "A";
+        } else if (dec == 14) {
+            hex = hex + "E";
+        }else {
             hex = hex + String.valueOf(dec);
         }
-        StringBuilder sb = new StringBuilder();
-        sb.append(hex);
-        sb.reverse();
+        StringBuilder str_b = new StringBuilder();
+        str_b.append(hex);
+        str_b.reverse();
 
-        return sb.toString();
+        return str_b.toString();
 
     }
 }
