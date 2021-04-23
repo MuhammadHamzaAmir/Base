@@ -8,8 +8,8 @@ class NumberSystemConversion {
         // this is to verify binary string
         try {
             String bin_s = "01";
-            for (int i = 0; i < binary.length(); i++) {
-                char z = binary.charAt(i);
+            for (int n = 0; n < binary.length(); n++) {
+                char z = binary.charAt(n);
                 if (!bin_s.contains(String.valueOf(z))) {
                     throw new Exception("Binary String is not valid");
                 }
@@ -19,10 +19,10 @@ class NumberSystemConversion {
             return -2;
         }
 
-        for (int i = 0; i < binary.length(); i++) {
-            char z = binary.charAt(i);
-            int a = Integer.parseInt(String.valueOf(z));
-            dec += (a * (Math.pow(2, pow)));
+        for (int n = 0; n < binary.length(); n++) {
+            char z = binary.charAt(n);
+            int int_z = Integer.parseInt(String.valueOf(z));
+            dec += (int_z * (Math.pow(2, pow)));
             pow--;
         }
 
@@ -36,8 +36,8 @@ class NumberSystemConversion {
         // this is to verify octal string
         try {
             String octalet = "01234567";
-            for (int i = 0; i < octal.length(); i++) {
-                char z = octal.charAt(i);
+            for (int n = 0; n < octal.length(); n++) {
+                char z = octal.charAt(n);
                 if (!octalet.contains(String.valueOf(z))) {
                     throw new Exception("Octal String is not valid");
                 }
@@ -46,10 +46,10 @@ class NumberSystemConversion {
         } catch (Exception e) {
             return -8;
         }
-        for (int i = 0; i < octal.length(); i++) {
-            char z = octal.charAt(i);
-            int a = Integer.parseInt(String.valueOf(z));
-            dec += (a * (Math.pow(8, pow)));
+        for (int n = 0; n < octal.length(); n++) {
+            char z = octal.charAt(n);
+            int int_z = Integer.parseInt(String.valueOf(z));
+            dec += (int_z * (Math.pow(8, pow)));
             pow--;
         }
 
@@ -63,8 +63,8 @@ class NumberSystemConversion {
         // this is to verify hex string
         try {
             String hexel = "0123456789ABCDEFabcdef";
-            for (int i = 0; i < hex.length(); i++) {
-                char z = hex.charAt(i);
+            for (int n = 0; n < hex.length(); n++) {
+                char z = hex.charAt(n);
                 if (!hexel.contains(String.valueOf(z))) {
                     throw new Exception("HexaDecimal String is not valid");
                 }
@@ -74,36 +74,36 @@ class NumberSystemConversion {
             return -16;
         }
 
-        for (int i = 0; i < hex.length(); i++) {
-            char z = hex.charAt(i);
-            int a = 0;
+        for (int n = 0; n < hex.length(); n++) {
+            char z = hex.charAt(n);
+            int int_z = 0;
             if ("A".equalsIgnoreCase(String.valueOf(z))) {
-                a = 10;
+                int_z = 10;
             } else if ("B".equalsIgnoreCase(String.valueOf(z))) {
-                a = 11;
+                int_z = 11;
             }
 
             else if ("C".equalsIgnoreCase(String.valueOf(z))) {
-                a = 12;
+                int_z = 12;
             }
 
             else if ("D".equalsIgnoreCase(String.valueOf(z))) {
-                a = 13;
+                int_z = 13;
             }
 
             else if ("E".equalsIgnoreCase(String.valueOf(z))) {
-                a = 14;
+                int_z = 14;
             }
 
             else if ("F".equalsIgnoreCase(String.valueOf(z))) {
-                a = 15;
+                int_z = 15;
             }
 
             else {
-                a = Integer.parseInt(String.valueOf(z));
+                int_z = Integer.parseInt(String.valueOf(z));
             }
 
-            dec += (a * (Math.pow(16, pow)));
+            dec += (int_z * (Math.pow(16, pow)));
             pow--;
         }
 
