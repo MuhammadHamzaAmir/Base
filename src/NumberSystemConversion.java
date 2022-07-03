@@ -2,7 +2,7 @@ import java.lang.Math;
 
 class NumberSystemConversion {
 
-    public int BinaryToDecimal(String binary) {
+    public int binaryToDecimal(String binary) {
         int dec = 0;
         int pow = binary.length() - 1;
         // this is to verify binary string
@@ -30,7 +30,7 @@ class NumberSystemConversion {
 
     }
 
-    public double OctalToDecimal(String octal) {
+    public double octalToDecimal(String octal) {
         double dec = 0;
         int pow = octal.length() - 1;
         // this is to verify octal string
@@ -56,7 +56,7 @@ class NumberSystemConversion {
         return dec;
     }
 
-    public double HexaDecimalToDecimal(String hex) {
+    public double hexaDecimalToDecimal(String hex) {
         double dec = 0;
         int pow = hex.length() - 1;
 
@@ -111,7 +111,7 @@ class NumberSystemConversion {
     }
 
     /**Decimals smaller than Zero won't be converted */
-    public String DecimalToBinary(int dec) {
+    public String decimalToBinary(int dec) {
         String binary = "";
         try{
             if (dec<0){
@@ -133,7 +133,7 @@ class NumberSystemConversion {
         return str_b.toString();
     }
 
-    public String DecimalToOctal(int dec) {
+    public String decimalToOctal(int dec) {
         String octal = "";
 
         try {
@@ -156,7 +156,7 @@ class NumberSystemConversion {
         return str_b.toString();
     }
 
-    public String DecimalToHexaDecimal(int dec) {
+    public String decimalToHexaDecimal(int dec) {
         String hex = "";
         try {
             if (dec < 0) {
